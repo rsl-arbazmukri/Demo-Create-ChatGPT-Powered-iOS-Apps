@@ -33,8 +33,6 @@ def process_chat_messages(data):
             messages.append(HumanMessage(content=content))
         elif message_type == 'AIMessage':
             messages.append(AIMessage(content=content))
-    
-    messages.append(SystemMessage(content='Give response in 20 words'))
 
     last_10_messages = messages[-10:]
     return last_10_messages
